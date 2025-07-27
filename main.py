@@ -3,7 +3,10 @@ import google.generativeai as genai
 genai.configure(api_key='Sua_Chave_Aqui')
 
 #selecione o modelo abaixo
-model = genai.GenerativeModel('gemini-2.5-flash')
+def fazer_pergunta(texto):
+    model = genai.GenerativeModel('gemini-2.5-flash')
+    resposta = model.generate_content(texto)
+    return resposta.text
 
 
 if __name__ == "__main__":
@@ -12,5 +15,5 @@ if __name__ == "__main__":
         pergunta = input("\nDigite sua pergunta (ou 'sair' para encerrar): ")
         if pergunta.lower() == "sair":
             break
-        resposta = model.generate_content(pergunta)
-        print(f"\n💡 {resposta.text}")
+        resposta = fazer_pergunta(pergunta)
+        print(f"\n💡 {resposta}")
