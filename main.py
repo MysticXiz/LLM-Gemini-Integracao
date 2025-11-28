@@ -7,8 +7,8 @@ from fastapi.staticfiles import StaticFiles
 
 # Configure a API key via variável de ambiente em Render: GENAI_API_KEY
 API_KEY = os.getenv("GENAI_API_KEY")
-if not API_KEY:
-    raise RuntimeError("Defina a variável de ambiente GENAI_API_KEY no Render")
+# if not API_KEY:
+#     raise RuntimeError("Defina a variável de ambiente GENAI_API_KEY no Render")
 
 genai.configure(api_key=API_KEY)
 
