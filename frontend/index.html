@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processador de Texto IA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Processador de Texto</h1>
+            <p class="subtitle">Simplifique, resuma e traduza seus textos com IA</p>
+        </header>
+
+        <div class="card">
+            <div class="input-group">
+                <label for="textInput">Cole seu texto aqui</label>
+                <textarea id="textInput" placeholder="Digite ou cole o texto que deseja processar..."></textarea>
+                <div class="char-count"><span id="charCount">0</span> caracteres</div>
+            </div>
+
+            <div class="buttons-group">
+                <button class="btn-action" data-method="Resumir">Resumir</button>
+                <button class="btn-action" data-method="Simplificar">Simplificar</button>
+                <button class="btn-action" data-method="Explicar">Explicar</button>
+                <button class="btn-action" data-method="Traduzir">Traduzir</button>
+            </div>
+
+            <div class="output-section" id="outputSection">
+                <div class="output-header" id="outputMethod"></div>
+                <div class="output-content" id="outputContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+    
+</body>
+</html>
