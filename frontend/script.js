@@ -4,7 +4,7 @@ const buttons = document.querySelectorAll('.btn-action');
 const outputSection = document.getElementById('outputSection');
 const outputMethod = document.getElementById('outputMethod');
 const outputContent = document.getElementById('outputContent');
-const apiUrl = 'http://127.0.0.1:8000/perguntar';
+const apiUrl = '/perguntar';
 // Atualizar contagem de caracteres
 textInput.addEventListener('input', () => {
     charCount.textContent = textInput.value.length;
