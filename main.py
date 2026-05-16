@@ -9,7 +9,7 @@ from fastapi import HTTPException
 # Configure a API key via variável de ambiente em Render: GENAI_API_KEY
 API_KEY = os.getenv("GENAI_API_KEY")
 if not API_KEY:
-    raise RuntimeError("Defina a variável de ambiente GENAI_API_KEY no Render")
+     raise RuntimeError("Defina a variável de ambiente GENAI_API_KEY no Render")
 
 client = genai.Client(api_key=API_KEY)
 
