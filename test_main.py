@@ -12,7 +12,7 @@ def test_metodo_resumir():
     """
     Verifica se o método Resumir existe corretamente
     """
-    assert botoes.get("Resumir") == "Resuma o seguinte texto:"
+    assert botoes.get("Resumir") == "Resuma o seguinte texto: Se olharmos a vida em seus pequenos detalhes, tudo parece bem ridículo. É como uma gota d`água vista num microscópio, uma só gota cheia de protozoários. Achamos muita graça como eles se agitam e lutam tanto entre si. Aqui, no curto período da vida humana, essa atividade febril produz um efeito cômico."
 
 
 def test_metodo_invalido():
