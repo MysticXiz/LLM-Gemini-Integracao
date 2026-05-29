@@ -1,0 +1,30 @@
+{
+  "name": "Python Pre-configurado para Pytest",
+  // Usa uma imagem oficial da Microsoft com Python já instalado
+  "image": "mcr.microsoft.com/devcontainers/python:3.11.9",
+
+  // Configurações personalizadas do VS Code no navegador
+  "customizations": {
+    "vscode": {
+      // Instala automaticamente as extensões necessárias para a apresentação
+      "extensions": [
+        "ms-python.python",          // Suporte oficial do Python
+        "ms-python.vscode-pylance",   // Auto-complete inteligente
+        "ms-python.python-targets"   // Interface visual para rodar testes (opcional)
+      ],
+      // Define configurações do VS Code (ex: ativar o painel de testes)
+      "settings": {
+        "python.testing.pytestEnabled": true,
+        "python.testing.unittestEnabled": false,
+        "python.testing.pytestArgs": ["."]
+      }
+    }
+  },
+
+  // Roda comandos automáticos ASSIM que o container terminar de ser criado
+  "postCreateCommand": "pip install --upgrade pip && pip install -r requirements.txt",
+
+  // Garante que o terminal padrão usado será o bash (mais rápido e limpo)
+  "updateContentCommand": "",
+  "postStartCommand": ""
+}
